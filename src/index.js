@@ -3,21 +3,27 @@ import axios from 'axios'
 import $ from 'jquery'
 import './js/api'
 
-const $form = $('#auth-form form');
+const $button = $('#action');
 
-$form.submit(function (e) {
+$button.click(function (e) {
     e.preventDefault();
 
-    let data = {};
-    $.each($(this).serializeArray(), function (i, field) {
-        data[field.name] = field.value;
-    });
+    const object = {
+        name: "Alex",
+        surname: "Modin",
+        email: "almod90@gmail.com",
+        skills: ["PHP", "JavaScript", "Linux"]
+    };
 
-    axios.post('api/test-1', data)
+    const data = {
+        json: JSON.stringify(object)
+    };
+
+    axios.post('api/test-2', data)
         .then(r => r.data)
         .then(d => {
             if (d.success) {
-                alert('Authorization ok!');
+                alert('JSON was send and it\'s valid!');
             } else {
                 //console.log(d.error);
                 throw new Error(d.error);

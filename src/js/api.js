@@ -3,16 +3,15 @@ const MockAdapter = require('axios-mock-adapter');
 
 const mock = new MockAdapter(axios);
 
-mock.onPost('/api/test-1').reply(function (config) {
+mock.onPost('/api/test-2').reply(function (config) {
     const data = JSON.parse(config.data);
 
-    if (data.username.length <= 0) return response("Please input username");
-    if (data.password.length <= 0) return response("Please input password");
-
-    if (data.username !== "test" || data.password !== "1234") return response("Invalid credentials");
-
-    if (data.token !== "test_token") return response("Invalid token");
-
+    try {
+        JSON.parse(data.json);
+    }
+    catch (e) {
+        response(e.message)
+    }
     return response();
 });
 
