@@ -1,0 +1,32 @@
+@import "variables";
+
+@import "~bootstrap/scss/bootstrap";
+
+html, body {
+  height: 100%;
+}
+
+#main {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#auth-form {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 480px;
+  background-color: $white;
+  padding: $grid-gutter-width * 1.5;
+  box-shadow: 2px 2px 4px rgba(0,0,0,0.25);
+
+  input, button {
+    border-radius: 0;
+  }
+
+  .btn {
+    display: block;
+    flex-grow: 1;
+  }
+}

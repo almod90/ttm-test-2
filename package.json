@@ -1,0 +1,37 @@
+{
+  "name": "ttm-test-1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx webpack --config webpack.config.js",
+    "watch": "npx webpack --config webpack.config.js --watch",
+    "live": "webpack-dev-server --config webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/almod90/ttm-test-1.git"
+  },
+  "author": "Alex Modin <almod90@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/almod90/ttm-test-1/issues"
+  },
+  "homepage": "https://github.com/almod90/ttm-test-1#readme",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "bootstrap": "^4.3.1",
+    "jquery": "^3.4.1"
+  },
+  "devDependencies": {
+    "axios-mock-adapter": "^1.17.0",
+    "css-loader": "^3.2.0",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "node-sass": "^4.13.0",
+    "sass-loader": "^8.0.0",
+    "style-loader": "^1.0.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.9.0"
+  }
+}
